@@ -3,9 +3,9 @@
 *.pdf
 *.html
 
-./png
-./tex
-./index_files
+png/*
+tex/*
+index_files/*
 
 .#*
 #*
