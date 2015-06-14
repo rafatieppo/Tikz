@@ -1,0 +1,55 @@
+\documentclass[mathserif, professionalfont]{standalone}
+\usepackage{palatino}
+\usepackage{eulervm}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{
+  arrows,
+  positioning,
+  matrix,
+  decorations.pathreplacing,
+  decorations.pathmorphing,
+  shapes,
+  backgrounds,
+  calc,
+  decorations.text,
+  shadows,
+  trees,
+  fit}
+%% \usepackage{3dplot}
+
+\pagestyle{empty}
+
+\usepackage{color}
+\definecolor{darkgreen}{rgb}{0.13,0.53,0.53}
+
+\newcommand{\tm}[1]{\tikz[overlay, anchor=base] \node[red] (#1) {};}
+
+\usepackage{pgfplotstable}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{eurosym}
+\usepackage{amsmath}
+%\usepackage{amsfonts,amssymb,amsxtra,amsmath} %% Não usar empheq
+\usepackage{pgfplotstable}
+\usepackage{pgfcalendar}
+\usepackage{filecontents}
+\usepackage{multirow}
+
+%\usepackage[active,pdftex,tightpage]{preview}
+%\PreviewEnvironment[]{tikzpicture}
+%\PreviewEnvironment[]{pgfpicture}
+
+\begin{document}
+
+\noindent
+<>
+
+\end{document}
