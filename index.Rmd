@@ -45,6 +45,10 @@ tem <- "TIKZ_SETUP.pgs"
 temlines <- readLines(tem)
 i <- grep(x=temlines, pattern="<>")
 
+dir.create("png")
+dir.create("tex")
+dir.create("index_files")
+
 pgf <- list.files(path="./pgf", pattern="*.pgf")
 
 j <- 1
