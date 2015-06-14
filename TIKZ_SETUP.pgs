@@ -39,7 +39,8 @@
 \usepackage{amsmath}
 %\usepackage{amsfonts,amssymb,amsxtra,amsmath} %% Não usar empheq
 \usepackage{pgfplotstable}
-\usepackage{pgfcalendar}
+\usepackage{siunitx} %% Tem conflito com o pgfcalendar, mas é mais útil.
+% \usepackage{pgfcalendar}
 \usepackage{filecontents}
 \usepackage{multirow}
 
