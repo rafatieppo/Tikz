@@ -1,0 +1,20 @@
+\usetikzlibrary{mindmap, trees}
+
+\begin{tikzpicture}
+  \path[mindmap, concept color=darkgreen, text=white]
+    node[concept] {Pre\c{c}o de venda de um im\'ovel}
+    [clockwise from=180]
+      child[concept color=darkgreen!50, black] {
+        node[concept] {\'Area ($m^2$), Quartos, Garagem, Piscina}
+      }
+      child[concept color=darkgreen!70!blue, black] {
+        node[concept] {Idade, Conserva\c{c}\~ao, Acabamento}
+      }
+      child[concept color=darkgreen!70!orange, black] {
+        node[concept] {Localiza\c{c}\~ao, Acessos, Seguran\c{c}a}
+      }
+      child[concept color=darkgreen!70!purple, black] {
+        node[concept] {\'Indices econ\^omicos}
+      }
+      ;
+\end{tikzpicture}
