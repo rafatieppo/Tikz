@@ -6,3 +6,6 @@
 ./png
 ./tex
 ./index_files
+
+.#*
+#*
