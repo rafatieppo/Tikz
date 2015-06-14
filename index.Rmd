@@ -1,0 +1,86 @@
+---
+output:
+  html_document:
+    css: style.css
+    self_contained: no
+---
+
+```{r setup, include=FALSE}
+##-----------------------------------------------------------------------------
+## Knitr settings. Do not run.
+
+opts_chunk$set(
+    tidy=FALSE,
+    cache=FALSE,
+    echo=FALSE,
+    message=FALSE,
+    error=FALSE,
+    warning=FALSE,
+    results="hide",
+    fig.show="hide")
+options(width=70)
+
+```
+
+<center>
+<hr style="height:2px;border:none;color:#333;background-color:#333;" />
+
+<h1>
+Figuras em Ti*k*z
+</h1>
+
+[Walmes Marques Zeviani](http://leg.ufpr.br/~walmes/ "email: walmes@ufpr.br")
+
+<hr style="height:2px;border:none;color:#333;background-color:#333;" />
+</center>
+
+Acompanhe o projeto no github: https://github.com/walmes/Tikz
+
+```{r, message=FALSE, error=FALSE, warning=FALSE, results="hide"}
+##-----------------------------------------------------------------------------
+## Lista os arquivos *.pgf.
+
+list.files()
+tem <- "TIKZ_SETUP.pgs"
+temlines <- readLines(tem)
+i <- grep(x=temlines, pattern="<>")
+
+pgf <- list.files(path="./pgf", pattern="*.pgf")
+
+j <- 1
+setwd("./pgf")
+for(j in seq_along(pgf)){
+    one <- readLines(pgf[j], encoding="utf8")
+    noext <- gsub(x=pgf[j], pattern="\\.pgf$", replacement="")
+    tex <- paste0(noext, ".tex")
+    writeLines(append(x=temlines[-i], values=one, after=i), con=tex)
+    cmd <- sprintf("pdflatex --shell-scape %s.tex", noext)
+    system(cmd)
+    cmd <- sprintf("convert -density 150 %s.pdf -quality 100 %s.png", noext, noext)
+    system(cmd)
+}
+system("mv *.png ../png")
+system("mv *.tex ../tex")
+system("rm -r *.log *.pdf")
+## system("rm -r *.log *.aux *.pdf")
+setwd("..")
+
+```
+
+```{r, results="asis"}
+
+for(j in seq_along(pgf)){
+    noext <- gsub(x=pgf[j], pattern="\\.pgf$", replacement="")
+    cat('<hr style="height:5px; width=400px">')
+    cmd <- sprintf('<center> ![%s](./png/%s.png "%s") </center><br/>\n\n',
+                   noext, noext, noext)
+    cat(cmd)
+    cmd <- sprintf('<center> [%i. %s.tex](./tex/%s.tex "%s") </center>\n\n' ,
+                   j, noext, noext, noext)
+    cat(cmd)
+    cmd <- sprintf('<center> [github: %s.pgf](https://github.com/walmes/Tikz/blob/master/pgf/%s.pgf "%s") </center>\n\n' ,
+                   noext, noext, noext)
+    cat(cmd)
+}
+
+```
