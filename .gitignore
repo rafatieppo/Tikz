@@ -2,6 +2,10 @@
 *.log
 *.pdf
 *.html
+*.dat
+*.script
+*.txt
+*.csv
 
 png/*
 tex/*
