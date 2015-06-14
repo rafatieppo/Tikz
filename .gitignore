@@ -2,3 +2,7 @@
 *.log
 *.pdf
 *.html
+
+./png
+./tex
+./index_files
