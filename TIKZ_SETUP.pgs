@@ -1,6 +1,14 @@
 \documentclass[mathserif, professionalfont]{standalone}
+
+\usepackage[light,condensed,math]{iwona}
+\usepackage[none]{ubuntu}
+\usepackage[scaled=0.8]{beramono}
+
 \usepackage{palatino}
 \usepackage{eulervm}
+
+\usepackage{scrextend}
+%\changefontsizes[11pt]{8pt}
 
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
@@ -36,8 +44,8 @@
 \usepackage{colortbl}
 \usepackage{booktabs}
 \usepackage{eurosym}
-\usepackage{amsmath}
-%\usepackage{amsfonts,amssymb,amsxtra,amsmath} %% Não usar empheq
+%\usepackage{amsmath}
+\usepackage{amsfonts,amssymb,amsxtra,amsmath} %% Não usar empheq
 \usepackage{pgfplotstable}
 \usepackage{siunitx} %% Tem conflito com o pgfcalendar, mas é mais útil.
 % \usepackage{pgfcalendar}
