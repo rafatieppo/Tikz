@@ -13,6 +13,7 @@
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{etoolbox} %% AtBeginEnvironment
 
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -29,7 +30,8 @@
   decorations.text,
   shadows,
   trees,
-  fit}
+  fit,
+  snakes}
 %% \usepackage{3dplot}
 
 \pagestyle{empty}
