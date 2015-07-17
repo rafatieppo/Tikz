@@ -35,7 +35,7 @@
 
 \begin{axis}[
   width=8cm, height=9cm,
-  xlabel=Tratamentos ($i$), ylabel=VariÃ¡vel resposta ($Y$),
+  xlabel=Tratamentos ($i$), ylabel=Vari\'a¡vel resposta ($Y$),
   x label style={rotate=180},
   xtick=\empty, xticklabels=\empty, yticklabels=\empty,
   extra x ticks={1,2,3,4},
