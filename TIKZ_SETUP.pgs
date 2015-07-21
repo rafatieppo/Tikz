@@ -38,7 +38,8 @@
 \begin{minipage}{\columnwidth}%
   \fi\fi%
   \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
-    \colorbox{shadecolor}{##1}\hskip-\fboxsep
+%%    \colorbox{shadecolor}{##1}\hskip-\fboxsep
+    ##1 \hskip-\fboxsep
     % There is no \\@totalrightmargin, so:
     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
   \MakeFramed {\advance\hsize-\width
@@ -63,12 +64,20 @@
 
 %%----------------------------------------------------------------------
 
-\usepackage[light,condensed,math]{iwona}
-\usepackage[none]{ubuntu}
-\usepackage[scaled=0.8]{beramono}
+% \usepackage[light,condensed,math]{iwona}
+% \usepackage[scaled=0.8]{beramono}
 
 \usepackage{palatino}
 \usepackage{eulervm}
+\usepackage[none]{ubuntu}
+\renewcommand{\ttdefault}{ubuntumono}
+\renewcommand{\ttfamily}{\fontUbuntuMono}
+
+%% Verbatim na fonte Ubuntu Mono.
+\usepackage{verbatim}
+\makeatletter
+\def\verbatim@font{\small\fontUbuntuMono}
+\makeatother
 
 \usepackage{scrextend}
 %\changefontsizes[11pt]{8pt}
